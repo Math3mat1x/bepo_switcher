@@ -16,8 +16,7 @@ case $(cat config_bepo) in
 
 	'1') echo 0 > config_bepo
 	num=1
-	bash clavier_bepo > /dev/null 2>&1
-	notify-send "Disposition AZZERTY."
 	setxkbmap fr-latin9
+	notify-send "Disposition AZZERTY."
 	;;
 esac
