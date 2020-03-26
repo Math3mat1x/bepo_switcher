@@ -1,0 +1,23 @@
+#!/bin/bash
+
+export PATH=$PATH:/usr/X11/lib/X11/xkb/
+dir=`dirname $0`
+
+if [ ! -e config_bepo ]; then
+	touch config_bepo && echo '0' > config_bepo
+fi
+
+case $(cat config_bepo) in
+	'0') echo 1 > config_bepo
+	num=0
+	xkbcomp -w0 "$dir/bepo.xkb" $DISPLAY || xkbcomp -w0 "$dir/bepo-xorglegacy.xkb" $DISPLAY
+	notify-send "Disposition BÉPO."
+	;;
+
+	'1') echo 0 > config_bepo
+	num=1
+	bash clavier_bepo > /dev/null 2>&1
+	notify-send "Disposition AZZERTY."
+	setxkbmap fr-latin9
+	;;
+esac
