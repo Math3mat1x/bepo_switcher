@@ -13,7 +13,6 @@ case $(cat config_bepo) in
 	xkbcomp -w0 "$dir/bepo.xkb" $DISPLAY || xkbcomp -w0 "$dir/bepo-xorglegacy.xkb" $DISPLAY
 	notify-send "Disposition BÉPO."
 	;;
-
 	'1') echo 0 > config_bepo
 	num=1
 	setxkbmap fr-latin9
