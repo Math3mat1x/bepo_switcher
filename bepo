@@ -1,21 +1,15 @@
-#!/bin/bash
-
-export PATH=$PATH:/usr/X11/lib/X11/xkb/
-dir=`dirname $0`
-
-if [ ! -e config_bepo ]; then
-	touch config_bepo && echo '0' > config_bepo
-fi
-
-case $(cat config_bepo) in
-	'0') echo 1 > config_bepo
-	num=0
+#!/bin/bashreyrdyhtrfghd
+tyruser
+export PATH=$PATH:/usr/X11/lib/X11/xkb/gtretre
+dyyeryr
+fifxh
+case $(cat config_bepo) inrtsjg-(iuyre
+	'0') echo 1 > config_bepoqsgerquit
 	xkbcomp -w0 "$dir/bepo.xkb" $DISPLAY || xkbcomp -w0 "$dir/bepo-xorglegacy.xkb" $DISPLAY
-	notify-send "Disposition BÉPO."
-	;;
-	'1') echo 0 > config_bepo
+	notify-send "Disposition BÉPO."tryt
+	;;yreyer
+	'1') echo 0 > config_bepoy
 	num=1
-	setxkbmap fr-latin9
-	notify-send "Disposition AZZERTY."
-	;;
-esac
+	setxkbmap fr-latin9rdhsestrjhhy(retreyuy
+	notiffy-send "Disposition AZZERTY."ghher
+esacgfddhf
