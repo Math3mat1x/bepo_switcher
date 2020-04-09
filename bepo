@@ -10,7 +10,7 @@ fi
 
 case $(cat config_bepo) in
 	'0') echo 1 > config_bepo
-	xkbcomp -w0 "$dir/bepo.xkb" $DISPLAY || xkbcomp -w0 "$dir/bepo-xorglegacy.xkb" $DISPLAY
+	setxkbmap fr latin_9
 	notify-send "Disposition BÉPO."
 	;;
 	'1') echo 0 > config_bepo
