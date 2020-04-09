@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export PATH=$PATH:/usr/X11/lib/X11/xkb/
-dir=`dirname $0`
-
 cd /home/$USER/.config
 if [ ! -e config_bepo ]; then
 	touch config_bepo && echo '0' > config_bepo
